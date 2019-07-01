@@ -12,5 +12,14 @@
             "prinsfrank\\indenting-persistent-blade-compiler\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "illuminate/support": "^5.8",
+        "illuminate/view": "^5.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2",
+        "mockery/mockery": "^1.2"
+    }
 }
