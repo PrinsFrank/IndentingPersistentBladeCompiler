@@ -1,0 +1,16 @@
+{
+    "name": "prinsfrank/indenting-persistent-blade-compiler",
+    "description": "Extension on the Laravel Blade compiler that persists indenting when using replaced content in blade templates.",
+    "authors": [
+        {
+            "name": "Frank Prins",
+            "email": "prinsfrank@vuln.one"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "prinsfrank\\indenting-persistent-blade-compiler\\": "src/"
+        }
+    },
+    "require": {}
+}
