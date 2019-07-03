@@ -10,7 +10,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "prinsfrank\\indenting-persistent-blade-compiler\\": "src/"
+            "PrinsFrank\\IndentingPersistentBladeCompiler\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PrinsFrank\\IndentingPersistentBladeCompiler\\Tests\\": "tests/"
         }
     },
     "require": {
