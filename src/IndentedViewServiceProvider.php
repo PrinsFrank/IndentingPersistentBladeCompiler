@@ -2,8 +2,11 @@
 
 namespace PrinsFrank\IndentingPersistentBladeCompiler;
 
+use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\View\Engines\CompilerEngine;
 use Illuminate\View\Engines\EngineResolver;
+use Illuminate\View\Factory;
+use Illuminate\View\ViewFinderInterface;
 use Illuminate\View\ViewServiceProvider;
 use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\IndentedBladeCompiler;
 
@@ -28,5 +31,16 @@ class IndentedViewServiceProvider extends ViewServiceProvider
         $resolver->register('blade', function () {
             return new CompilerEngine($this->app['blade.compiler']);
         });
+    }
+
+    /**
+     * @param EngineResolver $resolver
+     * @param ViewFinderInterface $finder
+     * @param Dispatcher $events
+     * @return Factory|IndentedViewFactory
+     */
+    protected function createFactory($resolver, $finder, $events): IndentedViewFactory
+    {
+        return new IndentedViewFactory($resolver, $finder, $events);
     }
 }
