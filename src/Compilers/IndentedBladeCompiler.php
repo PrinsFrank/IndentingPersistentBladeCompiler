@@ -5,9 +5,12 @@ namespace PrinsFrank\IndentingPersistentBladeCompiler\Compilers;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\View\Compilers\BladeCompiler;
+use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Concerns\IndentedCompilesIncludes;
 
 class IndentedBladeCompiler extends BladeCompiler
 {
+    use IndentedCompilesIncludes;
+
     /**
      * Compile Blade statements that start with "@".
      *
