@@ -8,7 +8,6 @@ Different updated compilers should be added, the current status is:
 - [ ] Conditionals
 - [x] Includes
 - [ ] Layouts
-- [ ] Loops
 - [ ] Stacks
 
 ## Setting things up
