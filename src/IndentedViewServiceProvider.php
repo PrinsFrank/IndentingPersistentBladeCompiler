@@ -7,7 +7,7 @@ use Illuminate\View\Engines\EngineResolver;
 use Illuminate\View\ViewServiceProvider;
 use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\IndentedBladeCompiler;
 
-class PersistentIndentingViewServiceProvider extends ViewServiceProvider
+class IndentedViewServiceProvider extends ViewServiceProvider
 {
     /**
      * @param EngineResolver $resolver
