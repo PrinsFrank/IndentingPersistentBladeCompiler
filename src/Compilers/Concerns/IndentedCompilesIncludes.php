@@ -3,7 +3,7 @@
 namespace PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Concerns;
 
 use Illuminate\View\Compilers\Concerns\CompilesIncludes;
-use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Helpers\ExpressionHelper;
+use PrinsFrank\IndentingPersistentBladeCompiler\Helpers\ExpressionHelper;
 
 trait IndentedCompilesIncludes
 {
@@ -18,7 +18,7 @@ trait IndentedCompilesIncludes
      */
     protected function compileEach($expression, $indenting = ''): string
     {
-        $expression = ExpressionHelper::addIndenting($expression, $indenting);
+        ExpressionHelper::addIndenting($expression, $indenting);
 
         return "<?php echo \$__env->renderEach{$expression}; ?>";
     }
