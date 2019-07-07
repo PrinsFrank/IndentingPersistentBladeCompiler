@@ -3,10 +3,25 @@
 namespace PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Concerns;
 
 use Illuminate\View\Compilers\Concerns\CompilesIncludes;
+use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Helpers\ExpressionHelper;
 
 trait IndentedCompilesIncludes
 {
     use CompilesIncludes;
+
+    /**
+     * Compile the each statements into valid PHP.
+     *
+     * @param string $expression
+     * @param string $indenting
+     * @return string
+     */
+    protected function compileEach($expression, $indenting = ''): string
+    {
+        $expression = ExpressionHelper::addIndenting($expression, $indenting);
+
+        return "<?php echo \$__env->renderEach{$expression}; ?>";
+    }
 
     /**
      * Compile the include statements into valid PHP.
