@@ -7,7 +7,7 @@ Different updated compilers should be added, the current status is:
 - [ ] Components
 - [ ] Conditionals
 - [x] Includes
-- [ ] Layouts
+- [x] Layouts
 - [x] Stacks
 
 ## Setting things up

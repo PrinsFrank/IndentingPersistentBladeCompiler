@@ -4,11 +4,13 @@ namespace PrinsFrank\IndentingPersistentBladeCompiler;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Factory;
+use PrinsFrank\IndentingPersistentBladeCompiler\Concerns\ManagesIndentedLayouts;
 use PrinsFrank\IndentingPersistentBladeCompiler\Concerns\ManagesIndentedStacks;
 
 class IndentedViewFactory extends Factory
 {
-    use ManagesIndentedStacks;
+    use ManagesIndentedLayouts,
+        ManagesIndentedStacks;
 
     protected function viewInstance($view, $path, $data): IndentedView
     {
