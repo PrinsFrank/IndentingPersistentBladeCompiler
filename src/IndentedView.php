@@ -3,6 +3,7 @@
 namespace PrinsFrank\IndentingPersistentBladeCompiler;
 
 use Illuminate\View\View;
+use PrinsFrank\IndentingPersistentBladeCompiler\Helpers\ContentHelper;
 
 class IndentedView extends View
 {
@@ -16,12 +17,10 @@ class IndentedView extends View
         $content = $this->engine->get($this->path, $this->gatherData());
 
         if(isset($this->data['indenting'])){
-            $content = preg_replace('/(\r\n|\r|\n)/', '$1'.$this->data['indenting'], $content);
+            ContentHelper::addIndentingEachLine($content, $this->data['indenting']);
         }
 
-        if (!in_array(substr($content,-1), ["\n", "\r", "\r\n"])){
-            $content .= PHP_EOL;
-        }
+        ContentHelper::addLastNewLineIfMissing($content);
 
         return $content;
     }
