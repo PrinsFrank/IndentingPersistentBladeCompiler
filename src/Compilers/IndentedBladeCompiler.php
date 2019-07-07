@@ -6,10 +6,12 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\View\Compilers\BladeCompiler;
 use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Concerns\IndentedCompilesIncludes;
+use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Concerns\IndentedCompilesStacks;
 
 class IndentedBladeCompiler extends BladeCompiler
 {
-    use IndentedCompilesIncludes;
+    use IndentedCompilesIncludes,
+        IndentedCompilesStacks;
 
     /**
      * Compile Blade statements that start with "@".
