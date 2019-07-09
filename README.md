@@ -4,7 +4,7 @@ Have you ever looked at the HTML Laravel generates and wondered about the mess? 
 
 Different updated compilers should be added, the current status is:
 
-- [ ] Components
+- [x] Components
 - [x] Includes
 - [x] Layouts
 - [x] Stacks

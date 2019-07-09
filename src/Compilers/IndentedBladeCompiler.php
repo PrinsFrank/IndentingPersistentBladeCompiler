@@ -5,13 +5,15 @@ namespace PrinsFrank\IndentingPersistentBladeCompiler\Compilers;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\View\Compilers\BladeCompiler;
+use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Concerns\IndentedCompilesComponents;
 use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Concerns\IndentedCompilesIncludes;
 use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Concerns\IndentedCompilesLayouts;
 use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\Concerns\IndentedCompilesStacks;
 
 class IndentedBladeCompiler extends BladeCompiler
 {
-    use IndentedCompilesIncludes,
+    use IndentedCompilesComponents,
+        IndentedCompilesIncludes,
         IndentedCompilesLayouts,
         IndentedCompilesStacks;
 
