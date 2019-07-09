@@ -155,6 +155,4 @@ This package fixes that and generates the following HTML:
 
 ## Setting things up
 
-Add the service provider to ``app/config.php`` in the ``Package Service Providers...`` area in the ``providers`` array:  ``PrinsFrank\IndentingPersistentBladeCompiler\IndentedViewServiceProvider::class``
-
 Run ```php artisan view:clear``` to clear the already compiled views. Don't forget to do this when deploying te production as well, existing templates will break!!!

@@ -8,6 +8,13 @@
             "email": "prinsfrank@vuln.one"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PrinsFrank\\IndentingPersistentBladeCompiler\\IndentedViewServiceProvider"
+            ]
+        }
+    },
     "autoload": {
         "psr-4": {
             "PrinsFrank\\IndentingPersistentBladeCompiler\\": "src/"
