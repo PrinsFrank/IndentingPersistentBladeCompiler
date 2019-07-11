@@ -157,4 +157,6 @@ This package fixes that and generates the following HTML:
 
 ## Setting things up
 
-Run ```php artisan view:clear``` to clear the already compiled views. Don't forget to do this when deploying te production as well, existing templates will break!!!
+Run ```composer require prinsfrank/indenting-persistent-blade-compiler```
+
+Run ```php artisan view:clear``` to clear the already compiled views. Don't forget to do this when deploying to production as well, existing templates will break!!!
