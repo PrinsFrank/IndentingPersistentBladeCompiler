@@ -30,6 +30,6 @@ trait IndentedCompilesComponents
      */
     protected function compileEndComponentFirst($expression = null, $indenting = ''): string
     {
-        return $this->compileEndComponent($indenting);
+        return $this->compileEndComponent($expression, $indenting);
     }
 }
