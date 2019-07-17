@@ -10,6 +10,12 @@ use PHPUnit\Framework\TestCase;
 use PrinsFrank\IndentingPersistentBladeCompiler\IndentedViewFactory;
 use stdClass;
 
+/**
+ * Class IndentedViewFactoryTest
+ * @package Illuminate\Tests\View
+ *
+ * @coversDefaultClass \PrinsFrank\IndentingPersistentBladeCompiler\IndentedViewFactory
+ */
 class IndentedViewFactoryTest extends TestCase
 {
     protected function tearDown(): void
@@ -17,6 +23,9 @@ class IndentedViewFactoryTest extends TestCase
         m::close();
     }
 
+    /**
+     * @covers ::renderEach
+     */
     public function testRenderEachCreatesViewForEachItemInArrayWhenNoEmpty(): void
     {
         $factory = m::mock(IndentedViewFactory::class.'[make]', $this->getFactoryArgs());
@@ -41,6 +50,9 @@ class IndentedViewFactoryTest extends TestCase
         $this->assertEquals('dayle    rees', $result);
     }
 
+    /**
+     * @covers ::renderEach
+     */
     public function testEmptyViewsCanBeReturnedFromRenderEach(): void
     {
         $factory = m::mock(IndentedViewFactory::class.'[make]', $this->getFactoryArgs());
@@ -56,6 +68,9 @@ class IndentedViewFactoryTest extends TestCase
         $this->assertEquals('empty', $factory->renderEach('view', [], 'iterator', 'foo', '    '));
     }
 
+    /**
+     * @covers ::renderEach
+     */
     public function testRawStringsMayBeReturnedFromRenderEach(): void
     {
         $this->assertEquals('foo', $this->getFactory()->renderEach('foo', [], 'item', 'raw|foo', '    '));

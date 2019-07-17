@@ -10,6 +10,9 @@ use Illuminate\View\ViewFinderInterface;
 use Illuminate\View\ViewServiceProvider;
 use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\IndentedBladeCompiler;
 
+/**
+ * @codeCoverageIgnore
+ */
 class IndentedViewServiceProvider extends ViewServiceProvider
 {
     /**
