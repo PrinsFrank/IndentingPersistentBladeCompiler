@@ -2,6 +2,7 @@
 
 namespace PrinsFrank\IndentingPersistentBladeCompiler;
 
+use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Str;
 use Illuminate\View\Factory;
 use PrinsFrank\IndentingPersistentBladeCompiler\Concerns\ManagesIndentedComponents;
@@ -14,6 +15,14 @@ class IndentedViewFactory extends Factory
         ManagesIndentedLayouts,
         ManagesIndentedStacks;
 
+    /**
+     * @param string $view
+     * @param string $path
+     * @param array|Arrayable $data
+     * @return IndentedView
+     *
+     * @codeCoverageIgnore
+     */
     protected function viewInstance($view, $path, $data): IndentedView
     {
         return new IndentedView($this, $this->getEngineFromPath($path), $view, $path, $data);
