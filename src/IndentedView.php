@@ -5,6 +5,12 @@ namespace PrinsFrank\IndentingPersistentBladeCompiler;
 use Illuminate\View\View;
 use PrinsFrank\IndentingPersistentBladeCompiler\Helpers\ContentHelper;
 
+/**
+ * Class IndentedView
+ * @package PrinsFrank\IndentingPersistentBladeCompiler
+ *
+ * @codeCoverageIgnore
+ */
 class IndentedView extends View
 {
     /**

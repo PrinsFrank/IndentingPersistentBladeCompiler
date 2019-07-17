@@ -46,7 +46,7 @@ class IndentedViewFactory extends Factory
             foreach ($data as $key => $value) {
                 // After the first include which already has the indenting prepended
                 // we need to add the indenting to every subsequent first line
-                if($key !== array_key_first($data)){
+                if($key !== array_keys($data)[0]){
                     $result .= $indenting;
                 }
                 $result .= $this->make(
