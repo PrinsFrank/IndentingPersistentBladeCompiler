@@ -1,6 +1,6 @@
 <?php
 
-namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Blade;
+namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Compilers;
 
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
@@ -9,6 +9,7 @@ use PrinsFrank\IndentingPersistentBladeCompiler\Compilers\IndentedBladeCompiler;
 
 abstract class AbstractBladeTestCase extends TestCase
 {
+    /** @var IndentedBladeCompiler */
     protected $compiler;
 
     protected function setUp(): void

@@ -2,7 +2,7 @@
 
 namespace Illuminate\Tests\View\Blade;
 
-use PrinsFrank\IndentingPersistentBladeCompiler\Tests\Blade\AbstractBladeTestCase;
+use PrinsFrank\IndentingPersistentBladeCompiler\Tests\Compilers\AbstractBladeTestCase;
 
 class BladeEndComponentTest extends AbstractBladeTestCase
 {
