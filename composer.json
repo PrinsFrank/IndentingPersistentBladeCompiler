@@ -8,6 +8,7 @@
             "email": "prinsfrank@vuln.one"
         }
     ],
+    "license": "MIT",
     "extra": {
         "laravel": {
             "providers": [
