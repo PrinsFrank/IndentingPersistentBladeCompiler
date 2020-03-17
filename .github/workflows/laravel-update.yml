@@ -17,8 +17,12 @@ jobs:
         with:
           owner: laravel
           repo: framework
-      - name: Latest Laravel release output
+      - name: Require the new release
         env:
           LATEST_LARAVEL_RELEASE: ${{ steps.latest_laravel_release.outputs.latest_tag }}
-        run: |
-          echo "Version $LATEST_LARAVEL_RELEASE was the latest release"
+        run: composer require laravel/framework:${LATEST_LARAVEL_RELEASE:2}
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
