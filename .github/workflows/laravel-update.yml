@@ -29,3 +29,8 @@ jobs:
         uses: peter-evans/create-pull-request@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update to version ${LATEST_LARAVEL_RELEASE:1}
+          title: Update to version ${LATEST_LARAVEL_RELEASE:1}
+          assignees: prinsfrank
+          reviewers: prinsfrank
+          branch: update-to-version-${LATEST_LARAVEL_RELEASE:1}
