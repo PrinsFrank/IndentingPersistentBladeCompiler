@@ -10,7 +10,7 @@ jobs:
     name: Get Latest Laravel release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Get Latest laravel release
         id: latest_laravel_release
         uses: abatilo/release-info-action@v1.1.0
