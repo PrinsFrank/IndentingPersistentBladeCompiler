@@ -1,0 +1,24 @@
+on:
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron:  '0 12 * * *'
+
+name: Laravel update
+jobs:
+  latest-version:
+    name: Get Latest Laravel release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Get Latest laravel release
+        id: latest_laravel_release
+        uses: abatilo/release-info-action@v1.1.0
+        with:
+          owner: laravel
+          repo: framework
+      - name: Latest Laravel release output
+        env:
+          LATEST_LARAVEL_RELEASE: ${{ steps.latest_laravel_release.outputs.latest_tag }}
+        run: |
+          echo "Version LATEST_LARAVEL_RELEASE was the latest release"
