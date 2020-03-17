@@ -37,6 +37,7 @@
         "mockery/mockery": "^1.2"
     },
     "scripts": {
+        "test": "phpunit",
         "post-install-cmd": "php artisan view:clear"
     }
 }
