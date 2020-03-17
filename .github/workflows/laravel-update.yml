@@ -21,4 +21,4 @@ jobs:
         env:
           LATEST_LARAVEL_RELEASE: ${{ steps.latest_laravel_release.outputs.latest_tag }}
         run: |
-          echo "Version LATEST_LARAVEL_RELEASE was the latest release"
+          echo "Version $LATEST_LARAVEL_RELEASE was the latest release"
