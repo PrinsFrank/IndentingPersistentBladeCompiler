@@ -21,8 +21,7 @@ jobs:
         env:
           LATEST_LARAVEL_RELEASE: ${{ steps.latest_laravel_release.outputs.latest_tag }}
         run: |
-          composer require illuminate/support:${LATEST_LARAVEL_RELEASE:1}
-          composer require illuminate/view:${LATEST_LARAVEL_RELEASE:1}
+          composer require illuminate/support:${LATEST_LARAVEL_RELEASE:1} illuminate/view:${LATEST_LARAVEL_RELEASE:1}
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v2
