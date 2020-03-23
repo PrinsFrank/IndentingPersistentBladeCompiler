@@ -24,7 +24,7 @@ jobs:
       - name: Require the new release
         env:
           LATEST_LARAVEL_RELEASE: ${{ steps.latest_laravel_release.outputs.latest_tag }}
-        if: env.LATEST_LARAVEL_RELEASE} > env.CURRENT_LARAVEL_RELEASE
+        if: env.LATEST_LARAVEL_RELEASE > env.CURRENT_LARAVEL_RELEASE
         run: |
           composer require illuminate/support:^${LATEST_LARAVEL_RELEASE:1:3} illuminate/view:^${LATEST_LARAVEL_RELEASE:1:3}
       - name: Create Pull Request
