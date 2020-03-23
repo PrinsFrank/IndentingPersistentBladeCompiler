@@ -19,10 +19,11 @@ jobs:
         with:
           owner: laravel
           repo: framework
+      - name: Get Current Laravel Release from composer.json
+        run: echo ::set-env name=CURRENT_LARAVEL_RELEASE::$(composer show 'illuminate/support' | grep 'versions' | grep -o -E '\*\ .+' | cut -d'v' -f2;)
       - name: Require the new release
         env:
           LATEST_LARAVEL_RELEASE: ${{ steps.latest_laravel_release.outputs.latest_tag }}
-          CURRENT_LARAVEL_RELEASE: ${{ composer show 'illuminate/support' | grep 'versions' | grep -o -E '\*\ .+' | cut -d'v' -f2; }}
         if: ${LATEST_LARAVEL_RELEASE:1:3} > ${LATEST_LARAVEL_RELEASE:1:3}
         run: |
           composer require illuminate/support:^${LATEST_LARAVEL_RELEASE:1:3} illuminate/view:^${LATEST_LARAVEL_RELEASE:1:3}
