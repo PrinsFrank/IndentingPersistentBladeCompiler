@@ -1,6 +1,4 @@
 on:
-  pull_request:
-    branches: [ master ]
   schedule:
     - cron:  '0 18 * * *'
 
