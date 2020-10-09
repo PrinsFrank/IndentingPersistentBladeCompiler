@@ -12,7 +12,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "PrinsFrank\\IndentingPersistentBlillumadeCompiler\\IndentedViewServiceProvider"
+                "PrinsFrank\\IndentingPersistentBladeCompiler\\IndentedViewServiceProvider"
             ]
         }
     },
