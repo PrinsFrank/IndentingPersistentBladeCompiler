@@ -1,8 +1,8 @@
 <?php
 
-namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Compilers\Concerns;
+namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Unit\Compilers\Concerns;
 
-use PrinsFrank\IndentingPersistentBladeCompiler\Tests\Compilers\AbstractBladeTestCase;
+use PrinsFrank\IndentingPersistentBladeCompiler\Tests\Unit\Compilers\AbstractBladeTestCase;
 
 class BladeIncludeTest extends AbstractBladeTestCase
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Helpers;
+namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Unit\Helpers;
 
 use PHPUnit\Framework\TestCase;
 use PrinsFrank\IndentingPersistentBladeCompiler\Helpers\ContentHelper;
 
 /**
  * Class ContentHelperTest
- * @package PrinsFrank\IndentingPersistentBladeCompiler\Tests\Helpers
+ * @package PrinsFrank\IndentingPersistentBladeCompiler\Tests\Unit\Helpers
  *
  * @coversDefaultClass \PrinsFrank\IndentingPersistentBladeCompiler\Helpers\ContentHelper
  */
