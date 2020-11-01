@@ -1,6 +1,6 @@
 <?php
 
-namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Compilers;
+namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Unit\Compilers;
 
 use Mockery as m;
 use PHPUnit\Framework\TestCase;

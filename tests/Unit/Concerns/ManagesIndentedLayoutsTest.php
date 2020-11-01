@@ -1,6 +1,6 @@
 <?php
 
-namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Concerns;
+namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Unit\Concerns;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\View\Engines\EngineResolver;
