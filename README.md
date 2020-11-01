@@ -112,7 +112,6 @@ Results in the following HTML. What a mess, right?
 ```
 This package fixes that and generates the following HTML:
 ```
-
 <html>
     <head>
         <stack></stack>

@@ -32,38 +32,38 @@ class CompilerTest extends TestCase
             '        <stack></stack>' . PHP_EOL .
             '    </head>' . PHP_EOL .
             '    <body>' . PHP_EOL .
-            '    <sidebar>' . PHP_EOL .
-            '        <sidebarcontent></sidebarcontent>' . PHP_EOL .
-            '        <sidebarsectioncontent></sidebarsectioncontent>' . PHP_EOL .
-            '    </sidebar>' . PHP_EOL .
-            '    <container>' . PHP_EOL .
-            '        <level-1>' . PHP_EOL .
-            '            <include>' . PHP_EOL .
-            '            </include>' . PHP_EOL .
-            '            <include>' . PHP_EOL .
-            '            </include>' . PHP_EOL .
-            '            <include>' . PHP_EOL .
-            '            </include>' . PHP_EOL .
-            '            <include>' . PHP_EOL .
-            '            </include>' . PHP_EOL .
-            '            <level-2>' . PHP_EOL .
-            '                <level-3>' . PHP_EOL .
-            '                    <include>' . PHP_EOL .
-            '                    </include>' . PHP_EOL .
-            '                    <include>' . PHP_EOL .
-            '                    </include>' . PHP_EOL .
-            '                </level-3>' . PHP_EOL .
-            '            </level-2>' . PHP_EOL .
-            '            <wrapper-component>' . PHP_EOL .
-            '                <wrapper-title>' . PHP_EOL .
-            '                    <title></title>' . PHP_EOL .
+            '        <sidebar>' . PHP_EOL .
+            '            <sidebarcontent></sidebarcontent>' . PHP_EOL .
+            '            <sidebarsectioncontent></sidebarsectioncontent>' . PHP_EOL .
+            '        </sidebar>' . PHP_EOL .
+            '        <container>' . PHP_EOL .
+            '            <level-1>' . PHP_EOL .
+            '                <include>' . PHP_EOL .
+            '                </include>' . PHP_EOL .
+            '                <include>' . PHP_EOL .
+            '                </include>' . PHP_EOL .
+            '                <include>' . PHP_EOL .
+            '                </include>' . PHP_EOL .
+            '                <include>' . PHP_EOL .
+            '                </include>' . PHP_EOL .
+            '                <level-2>' . PHP_EOL .
+            '                    <level-3>' . PHP_EOL .
+            '                        <include>' . PHP_EOL .
+            '                        </include>' . PHP_EOL .
+            '                        <include>' . PHP_EOL .
+            '                        </include>' . PHP_EOL .
+            '                    </level-3>' . PHP_EOL .
+            '                </level-2>' . PHP_EOL .
+            '                <wrapper-component>' . PHP_EOL .
+            '                    <wrapper-title>' . PHP_EOL .
             '                        <title></title>' . PHP_EOL .
-            '                </wrapper-title>' . PHP_EOL .
-            '                <component></component>' . PHP_EOL .
+            '                            <title></title>' . PHP_EOL .
+            '                    </wrapper-title>' . PHP_EOL .
             '                    <component></component>' . PHP_EOL .
-            '            </wrapper-component>' . PHP_EOL .
-            '        </level-1>' . PHP_EOL .
-            '    </container>' . PHP_EOL .
+            '                        <component></component>' . PHP_EOL .
+            '                </wrapper-component>' . PHP_EOL .
+            '            </level-1>' . PHP_EOL .
+            '        </container>' . PHP_EOL .
             '    </body>' . PHP_EOL .
             '</html>' . PHP_EOL,
             $this->renderTemplate( 'main')
@@ -79,13 +79,13 @@ class CompilerTest extends TestCase
             '<stack></stack>' . PHP_EOL .
             '    </head>' . PHP_EOL .
             '    <body>' . PHP_EOL .
-            '    <sidebar>' . PHP_EOL .
-            '                <sidebarcontent></sidebarcontent>' . PHP_EOL .
-            '        ' . PHP_EOL .
+            '        <sidebar>' . PHP_EOL .
+            '                        <sidebarcontent></sidebarcontent>' . PHP_EOL .
+            '            ' . PHP_EOL .
             '<sidebarsectioncontent></sidebarsectioncontent>' . PHP_EOL .
-            '    </sidebar>' . PHP_EOL .
-            '    <container>' . PHP_EOL .
-            '        <level-1>' . PHP_EOL .
+            '        </sidebar>' . PHP_EOL .
+            '        <container>' . PHP_EOL .
+            '            <level-1>' . PHP_EOL .
             '    <include>' . PHP_EOL .
             '</include>    <include>' . PHP_EOL .
             '</include>    <include>' . PHP_EOL .
@@ -104,7 +104,7 @@ class CompilerTest extends TestCase
             '    <component></component>' . PHP_EOL .
             '        <component></component>' . PHP_EOL .
             '</wrapper-component></level-1>' . PHP_EOL .
-            '    </container>' . PHP_EOL .
+            '        </container>' . PHP_EOL .
             '    </body>' . PHP_EOL .
             '</html>',
             $this->renderTemplate( 'main', [], false)

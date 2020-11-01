@@ -7,13 +7,13 @@
         @stack('scripts')
     </head>
     <body>
-    <sidebar>
-        @section('sidebar')
-        <sidebarcontent></sidebarcontent>
-        @show
-    </sidebar>
-    <container>
-        @yield('content')
-    </container>
+        <sidebar>
+            @section('sidebar')
+            <sidebarcontent></sidebarcontent>
+            @show
+        </sidebar>
+        <container>
+            @yield('content')
+        </container>
     </body>
 </html>
