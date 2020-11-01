@@ -18,8 +18,8 @@
     </level-2>
     @component('component')
         @slot('title')
-            <title></title>
-            <title></title>
+        <title></title>
+        <title></title>
         @endslot
         <component></component>
         <component></component>
