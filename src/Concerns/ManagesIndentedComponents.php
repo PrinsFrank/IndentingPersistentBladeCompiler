@@ -2,7 +2,11 @@
 
 namespace PrinsFrank\IndentingPersistentBladeCompiler\Concerns;
 
+use Closure;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\View\Concerns\ManagesComponents;
+use Illuminate\View\View;
+use Throwable;
 
 trait ManagesIndentedComponents
 {
@@ -13,11 +17,24 @@ trait ManagesIndentedComponents
      *
      * @param string $indenting
      * @return string
+     * @throws Throwable
      */
     public function renderComponent(string $indenting = ''): string
     {
-        $name = array_pop($this->componentStack);
+        $view = array_pop($this->componentStack);
 
-        return $this->make($name, $this->componentData($name) + ['indenting' => $indenting])->render();
+        $data = $this->componentData();
+
+        if ($view instanceof Closure) {
+            $view = $view($data + ['indenting' => $indenting]);
+        }
+
+        if ($view instanceof View) {
+            return $view->with($data + ['indenting' => $indenting])->render();
+        } elseif ($view instanceof Htmlable) {
+            return $view->toHtml();
+        } else {
+            return $this->make($view, $data + ['indenting' => $indenting])->render();
+        }
     }
 }
