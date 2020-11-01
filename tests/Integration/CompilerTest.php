@@ -56,10 +56,10 @@ class CompilerTest extends TestCase
             '                </level-2>' . PHP_EOL .
             '                <wrapper-component>' . PHP_EOL .
             '                    <wrapper-title>' . PHP_EOL .
-            '                    <title></title>' . PHP_EOL .
+            '                        <title></title>' . PHP_EOL .
             '                        <title></title>' . PHP_EOL .
             '                    </wrapper-title>' . PHP_EOL .
-            '                <component></component>' . PHP_EOL .
+            '                    <component></component>' . PHP_EOL .
             '                        <component></component>' . PHP_EOL .
             '                </wrapper-component>' . PHP_EOL .
             '            </level-1>' . PHP_EOL .
@@ -98,10 +98,10 @@ class CompilerTest extends TestCase
             '    </level-2>' . PHP_EOL .
             '    <wrapper-component>' . PHP_EOL .
             '    <wrapper-title>' . PHP_EOL .
-            '    <title></title>' . PHP_EOL .
+            '        <title></title>' . PHP_EOL .
             '        <title></title>' . PHP_EOL .
             '    </wrapper-title>' . PHP_EOL .
-            '<component></component>' . PHP_EOL .
+            '    <component></component>' . PHP_EOL .
             '        <component></component>' . PHP_EOL .
             '</wrapper-component></level-1>' . PHP_EOL .
             '        </container>' . PHP_EOL .

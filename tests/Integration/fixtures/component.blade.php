@@ -1,6 +1,6 @@
 <wrapper-component>
     <wrapper-title>
-    {{ $title }}
+        {{ $title }}
     </wrapper-title>
-{{ $slot }}
+    {{ $slot }}
 </wrapper-component>
