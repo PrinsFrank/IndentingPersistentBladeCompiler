@@ -1,0 +1,19 @@
+@push('scripts')
+<stack></stack>
+<stack></stack>
+@endpush
+<html>
+    <head>
+        @stack('scripts')
+    </head>
+    <body>
+    <sidebar>
+        @section('sidebar')
+        <sidebarcontent></sidebarcontent>
+        @show
+    </sidebar>
+    <container>
+        @yield('content')
+    </container>
+    </body>
+</html>
