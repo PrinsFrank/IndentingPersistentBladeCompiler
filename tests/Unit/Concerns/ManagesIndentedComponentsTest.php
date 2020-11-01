@@ -3,6 +3,7 @@
 namespace PrinsFrank\IndentingPersistentBladeCompiler\Tests\Unit\Concerns;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\View\Engines\EngineResolver;
 use Illuminate\View\Engines\PhpEngine;
 use Illuminate\View\ViewFinderInterface;
@@ -21,7 +22,7 @@ class ManagesIndentedComponentsTest extends TestCase
     {
         $factory = $this->getFactory();
         $factory->getFinder()->shouldReceive('find')->andReturn(__DIR__ . '/../fixtures/component.php');
-        $factory->getEngineResolver()->shouldReceive('resolve')->andReturn(new PhpEngine);
+        $factory->getEngineResolver()->shouldReceive('resolve')->andReturn(new PhpEngine(new Filesystem));
         $factory->getDispatcher()->shouldReceive('dispatch');
         $factory->startComponent('component', ['name' => 'Frank']);
         $factory->slot('title');
