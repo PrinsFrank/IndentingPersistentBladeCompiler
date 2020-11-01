@@ -20,7 +20,7 @@ class ManagesIndentedComponentsTest extends TestCase
     public function testComponentHandling(): void
     {
         $factory = $this->getFactory();
-        $factory->getFinder()->shouldReceive('find')->andReturn(__DIR__.'/../fixtures/component.php');
+        $factory->getFinder()->shouldReceive('find')->andReturn(__DIR__ . '/../fixtures/component.php');
         $factory->getEngineResolver()->shouldReceive('resolve')->andReturn(new PhpEngine);
         $factory->getDispatcher()->shouldReceive('dispatch');
         $factory->startComponent('component', ['name' => 'Frank']);

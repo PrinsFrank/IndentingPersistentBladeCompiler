@@ -2,7 +2,6 @@
 
 namespace Illuminate\Tests\View;
 
-
 use PHPUnit\Framework\TestCase;
 use PrinsFrank\IndentingPersistentBladeCompiler\IndentedViewFacade;
 use PrinsFrank\IndentingPersistentBladeCompiler\IndentedViewServiceProvider;
