@@ -34,7 +34,7 @@ class CompilerTest extends TestCase
             '    <body>' . PHP_EOL .
             '        <sidebar>' . PHP_EOL .
             '            <sidebarcontent></sidebarcontent>' . PHP_EOL .
-            '            <sidebarsectioncontent></sidebarsectioncontent>' . PHP_EOL .
+            '                        <sidebarsectioncontent></sidebarsectioncontent>' . PHP_EOL .
             '        </sidebar>' . PHP_EOL .
             '        <container>' . PHP_EOL .
             '            <level-1>' . PHP_EOL .
@@ -81,8 +81,7 @@ class CompilerTest extends TestCase
             '    <body>' . PHP_EOL .
             '        <sidebar>' . PHP_EOL .
             '                        <sidebarcontent></sidebarcontent>' . PHP_EOL .
-            '            ' . PHP_EOL .
-            '<sidebarsectioncontent></sidebarsectioncontent>' . PHP_EOL .
+            '            <sidebarsectioncontent></sidebarsectioncontent>' . PHP_EOL .
             '        </sidebar>' . PHP_EOL .
             '        <container>' . PHP_EOL .
             '            <level-1>' . PHP_EOL .
