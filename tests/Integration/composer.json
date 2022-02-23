@@ -1,0 +1,7 @@
+{
+  "autoload": {
+    "psr-4": {
+      "PrinsFrank\\IndentingPersistentBladeCompiler\\Tests\\Integration\\fixtures\\Component\\": ""
+    }
+  }
+}
